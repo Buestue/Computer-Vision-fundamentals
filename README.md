@@ -24,7 +24,7 @@ This is the basic code importing video from an USB port and displaying it in an 
 
 # 2.) Line Drawing in video
 These Script shows how to draw lines in an video with the cv2.line function. The exact coordinates of the points has to be given into the function. The third parameter defines the color and the fourth one the thickness of the lines. Heres one example:
-cv2.line(frame,points[-1], points[-2], (255,0,0), 5)/
+cv2.line(frame,points[-1], points[-2], (255,0,0), 5)__
 Note that you have to click on 5 points before its starts to draw the lines.
 # 3.) Morphological Transformation
 # 4.) MouseEvent Coordinate
