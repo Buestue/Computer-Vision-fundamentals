@@ -27,7 +27,18 @@ These Script shows how to draw lines in an video with the cv2.line function. The
 ```cv2.line(frame,points[-1], points[-2], (255,0,0), 5)``` <br />
 Note that you have to click on 5 points before its starts to draw the lines.
 # 3.) Morphological Transformation
-![alt text](https://github.com/Buestue/Computer-Vision-practices/blob/master/smarties.png?raw=true)
+Morphological Transformation is used to abstract shapes, figures and structures in an image.[1] In this example we take a look at this picture of smarties and try to abstact them: <br />
+![Smarties](https://github.com/Buestue/Computer-Vision-practices/blob/master/smarties.png?raw=true) <br />
+Fristly we will threshhold the image to filter the background. The image is stored as _mask_ <br />
+```_, mask=cv.threshold(img, 220, 255, cv.THRESH_BINARY_INV)``` <br />
+The resulted image _mask_ looks good for now, but contains white spots due to the lighint in the picture. To smooth them out, we can dilate and/or erose them: <br />
+```dilation=cv.dilate(mask, kernal, iterations=3)``` <br />
+```erosion= cv.erode(dilation, kernal, iterations=3)``` <br />
+The result can be seen here: <br />
+![morph result](https://github.com/Buestue/Computer-Vision-practices/blob/master/morph-result.png?raw=true) <br />
+
+
+
 # 4.) MouseEvent Coordinate
 # 5.) Movement Detection
 # 6.) Reduce Resolution
@@ -38,3 +49,5 @@ Note that you have to click on 5 points before its starts to draw the lines.
 # 11.) Tracking based on Color
 # 12.) Camera based Localization
 # 13.) Advanced Object Tracking
+# 14.) References
+[1] https://lmb.informatik.uni-freiburg.de/lectures/praktika_brox/bvpraktikum/BVAnl_morphologie.pdf
