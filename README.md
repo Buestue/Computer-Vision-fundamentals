@@ -27,6 +27,7 @@ These Script shows how to draw lines in an video with the cv2.line function. The
 ```cv2.line(frame,points[-1], points[-2], (255,0,0), 5)``` <br />
 Note that you have to click on 5 points before its starts to draw the lines.
 # 3.) Morphological Transformation
+![alt text](https://github.com/Buestue/Computer-Vision-practices/blob/master/smarties.png?raw=true)
 # 4.) MouseEvent Coordinate
 # 5.) Movement Detection
 # 6.) Reduce Resolution
