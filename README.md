@@ -35,7 +35,7 @@ The resulted image _mask_ looks good for now, but contains white spots due to th
 ```dilation=cv.dilate(mask, kernal, iterations=3)``` <br />
 ```erosion= cv.erode(dilation, kernal, iterations=3)``` <br />
 The result can be seen here: <br />
-![morph result](https://github.com/Buestue/Computer-Vision-practices/blob/master/morph_result.png?raw=true) <br />
+![morph result](https://github.com/Buestue/Computer-Vision-practices/blob/master/morph_result.PNG?raw=true) <br />
 
 
 
