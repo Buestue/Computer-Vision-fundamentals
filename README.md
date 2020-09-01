@@ -1,4 +1,4 @@
-# Computer Vision-practices-with OpenCV
+# Computer Vision-fundamentals-with OpenCV
 These practices contain image processing with the OpenCV library written in Python. The tutorials are partly from the Youtube Chanel ProgrammingKnowledge. Definitly check his videos for in depth explanations: <br />
 https://www.youtube.com/c/ProgrammingKnowledge/
 
