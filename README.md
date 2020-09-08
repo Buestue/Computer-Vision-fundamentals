@@ -40,6 +40,8 @@ The result can be seen here: <br />
 
 
 # 4.) MouseEvent Coordinate
+Often we will have to interact within the video. In this script we will take a look on how to store the coordinates of a mouseclick by utilizing this OpenCV function: <br/>
+```cv2.EVENT_LBUTTONDOWN``` <br />
 # 5.) Movement Detection
 # 6.) Reduce Resolution
 # 7.) Split&Merge
