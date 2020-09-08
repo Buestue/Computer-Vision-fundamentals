@@ -1,0 +1,32 @@
+import cv2
+
+#events = [i for i in dir(cv2) if 'EVENT' in i]
+#print(events)
+
+cap=cv2.VideoCapture(0)
+cap.set(3, 1280)
+cap.set(4, 720)
+
+
+def click_event(event, x, y, flags, param):
+    if event==cv2.EVENT_LBUTTONDOWN:
+        print(x,',', y)
+        font=cv2.FONT_HERSHEY_SIMPLEX
+        strXY= str(x) + ', '+ str(y)
+        cv2.putText(frame, strXY, (x,y), font, 1, (255,0,255), 2)
+        cv2.imshow('frame', frame) 
+        
+        
+cap=cv2.VideoCapture(0)
+cap.set(3, 1280)
+cap.set(4, 720)
+
+while(True):
+    ret, frame = cap.read()
+    cv2.imshow('frame', frame)
+    cv2.setMouseCallback('frame', click_event)
+    
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+cap.release()
+cv2.destroyAllWindows()
