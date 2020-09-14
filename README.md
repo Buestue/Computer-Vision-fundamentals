@@ -43,6 +43,23 @@ The result can be seen here: <br />
 Often we will have to interact within the video. In this script we will take a look on how to store the coordinates of a mouseclick by utilizing this OpenCV function: <br/>
 ```cv2.EVENT_LBUTTONDOWN``` <br />
 # 5.) Movement Detection
+In this section we're going to look how to detect moving objects in a video. We will take a look at the output image on every step to see the results and get an idea what the function actually does. <br/>
+The frist thing we do is loading two frames on every iteration and substracting them with the function <br />
+```diff=cv.absdiff(frame1, frame2)``` <br />
+By doing this, we get only the pixels that are changing. Then we convert the image to a grayscaled one as we dont need the colour and do some blurring and threshholding afterwards. With the threshholding and dilating function we're trying to higlight the contours of that moving object
+```_, thresh=cv.threshold(blur, 20, 255, cv.THRESH_BINARY)``` <br />
+```dilated=cv.dilate(thresh, None, iterations=3)``` <br />
+At the end we can find the contours and draw a rectangle over that. Note that we specify a certain area of the contour to be filteres out to reduce the noise.
+```for contours in contours:``` <br />
+```        (x,y,w,h)=cv.boundingRect(contours)``` <br />
+```        if cv.contourArea(contours)<7000:``` <br />
+```            continue``` <br />
+```        elif cv.contourArea(contours)>100000:``` <br />
+```            continue``` <br />
+```        cv.rectangle(frame1, (x,y), (x+w, y+h), (0,255,0), 2)``` <br />
+```        cv.putText(frame1, "Status: Movement", (10,20), cv.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 3)``` <br />
+
+![](movement.gif)
 # 6.) Reduce Resolution
 # 7.) Split&Merge
 # 8.) Text on Video
