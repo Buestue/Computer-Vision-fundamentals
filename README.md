@@ -61,6 +61,7 @@ At the end we can find the contours and draw a rectangle over that. Note that we
 
 ![](movement.gif)
 # 6.) Reduce Resolution
+In this code we'll reduce the resolution of the image. This will come handy for small edge devices like a raspberry pi in order to handle the live stream. 
 # 7.) Split&Merge
 # 8.) Text on Video
 # 9.) Treshholding
